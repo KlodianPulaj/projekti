@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <link rel="stylesheet" href="loginstyle.css">
+
+</head>
+<body>
+<div class="login-page">
+  <div class="form">
+    <p>Ju lutem shkruani te dhenat<br></p>
+
+    <form class="register-form">
+      <input type="text" placeholder="name"/>
+      <input type="password" placeholder="password"/>
+      <input type="text" placeholder="email address"/>
+      <button>create</button>
+      <p class="message">Already registered? <a href="#">Sign In</a></p>
+    </form>
+    <form class="login-form">
+      <input type="text" placeholder="username"/>
+      <input type="password" placeholder="password"/>
+      <button>login</button>
+      <p class="message">Not registered? <a href="#">Create an account</a></p>
+      <p class="message">Anuloni <a href="index.html">Kthehu mbrapa</a></p>
+
+    </form>
+  </div>
+</div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="app.js"></script>
+    <script>$('.message a').click(function(){
+        $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
+     });
+     
+     function validateLoginForm() {
+  var username = document.getElementById("username").value;
+  var password = document.getElementById("password").value;
+
+  var isValid = true;
+
+  if (username == "") {
+    alert("Please enter a username");
+    isValid = false;
+  }
+
+  if (password == "") {
+    alert("Please enter a password");
+    isValid = false;
+  }
+
+  return isValid;
+}
+
+
+
+     </script>
+</body>
+</html>
